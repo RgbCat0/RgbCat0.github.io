@@ -11,7 +11,7 @@
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: #040404;
+  background-color: #1e2029;
   color: #fff;
   position: relative;
   background: transparent;
@@ -20,7 +20,7 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #040404 url("../img/bg.jpg") top right no-repeat;
+  background: #1e2029 top right no-repeat;
   background-size: cover;
   left: 0;
   right: 0;
@@ -891,6 +891,7 @@ section .container {
 
 .portfolio .portfolio-wrap .portfolio-links {
   text-align: center;
+  align-items: stretch;
   z-index: 4;
 }
 
@@ -1003,14 +1004,21 @@ section .container {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
-.contact .info-box {
+
+.contact .info {
+  display: flex;
   color: #444444;
+  background: rgba(255, 255, 255, 0.08);
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
   width: 100%;
-  background: rgba(255, 255, 255, 0.08);
+}
+.contact .info .contain {
+  width: 300px;
 }
 
-.contact .info-box i.bx {
+.contact .info i.bx {
   font-size: 24px;
   color: #18d26e;
   border-radius: 50%;
@@ -1019,14 +1027,14 @@ section .container {
   background: rgba(255, 255, 255, 0.1);
 }
 
-.contact .info-box h3 {
+.contact .info h3 {
   font-size: 20px;
   color: rgba(255, 255, 255, 0.5);
   font-weight: 700;
   margin: 10px 0 8px 68px;
 }
 
-.contact .info-box p {
+.contact .info p {
   padding: 0;
   color: #fff;
   line-height: 24px;
@@ -1034,12 +1042,12 @@ section .container {
   margin: 0 0 0 68px;
 }
 
-.contact .info-box .social-links {
+.contact .info .social-links {
   margin: 5px 0 0 68px;
   display: flex;
 }
 
-.contact .info-box .social-links a {
+.contact .info .social-links a {
   font-size: 18px;
   display: inline-block;
   color: #fff;
@@ -1048,7 +1056,7 @@ section .container {
   transition: 0.3s;
 }
 
-.contact .info-box .social-links a:hover {
+.contact .info .social-links a:hover {
   color: #18d26e;
 }
 
