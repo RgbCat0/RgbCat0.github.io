@@ -573,14 +573,20 @@ section,
 .hero img {
   position: absolute;
   top: 0;        /* Keeps the image aligned to the top */
-  right: 10%;      /* Aligns the image to the right */
+  right: 0%;      /* Aligns the image to the right */
   bottom: 0;     /* Keeps the image aligned to the bottom */
   left: auto;    /* Prevents the image from stretching to the left */
   display: block;
-  width: 20%;   /* Adjust the width as needed */
+  width: 40%;   /* Adjust the width as needed */
   height: 100%;  /* Keep height as 100% of the container */
   object-fit: cover;
   z-index: 1;
+}
+@media (max-width: 768px) {
+  .hero img {
+    width: 100%;   /* Adjust the width as needed */
+    height: 100%;  /* Keep height as auto of the container */
+  }
 }
 
 .hero .container {
@@ -612,7 +618,7 @@ section,
   background-color: color-mix(in srgb, var(--default-color), transparent 90%);
   color: var(--default-color);
   font-size: 14px;
-  width: 40px;
+  width: auto;
   height: 40px;
   border-radius: 50px;
   display: inline-flex;

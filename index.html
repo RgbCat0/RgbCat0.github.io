@@ -71,28 +71,39 @@
     <main class="main">
       <!-- Hero Section -->
       <section id="hero" class="hero section dark-background">
-        <img src="assets/img/portfolio/Asteroids/asteroids.gif" alt="" data-aos="fade-in" />
+        <img src="assets/img/portfolio/Asteroids/asteroids.gif" loading="lazy" alt="" data-aos="fade-in" />
+        <video autoplay loop muted playsinline  loading="lazy" poster="" data-aos="">
+  <source src="assets/img/portfolio/Asteroids/yourgif.mp4" type="video/mp4">
+  <!-- Fallback if video not supported -->
+  <img src="images/yourgif-preview.jpg" alt="Hero animation">
+</video>
 
         <div class="container" data-aos="zoom-out" data-aos-delay="100">
           <h2>Jesper Heese</h2>
           <p>
             I'm a
-            <span
-              class="typed"
-              >game & android developer</span>
-              
+            <span class="typed">game & android developer</span>
           </p>
-          <div class="social-links">
-            <a href="#"><i class="bi bi-envelope-fill"></i></a>
-            <a href="#"><i class="bi bi-linkedin"></i></a>
-          </div>
+  <p>
+    <a href="portfolio.html" class="btn btn-primary btn-lg btn-dark">
+      <strong>View Portfolio</strong>
+    </a>
+  </p>
+
+<div class="social-links mt-3">
+  <a href="https://github.com/yourusername" class="btn btn-dark me-2">
+    <i class="bi bi-github"></i> GitHub
+  </a>
+  <a href="https://twitter.com/yourusername" class="btn btn-dark me-2">
+    <i class="bi bi-twitter"></i>  Twitter
+  </a>
+</div>
         </div>
       </section>
       <!-- /Hero Section -->
     </main>
 
     <footer id="footer" class="footer dark-background">
-      <div class="container">
         <div class="container">
           <div class="copyright">
             <span>Copyright</span>
@@ -137,7 +148,8 @@
     <script src="assets/js/main.js"></script>
   </body>
 </html>
-lightbox.min.js"></script>
+
+<!-- <script src="lightbox.min.js"></script> -->
 <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
