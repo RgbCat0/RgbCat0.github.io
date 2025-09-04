@@ -111,6 +111,11 @@ h6 {
 .main {
   flex: 1;
 }
+.container-wide {
+  max-width: 1600px !important;
+  margin: 0 auto;
+  padding: 0 15px;
+}
 
 
 /*--------------------------------------------------------------
@@ -439,7 +444,7 @@ h6 {
 }
 
 .page-title .heading {
-  padding: 80px 0 80px 0;
+  padding: 20px 0 20px 0;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
