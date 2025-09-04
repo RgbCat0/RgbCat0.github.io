@@ -188,14 +188,17 @@
     });
 
   });
-  // on portfolio page load auto switch to games
-  window.addEventListener('load', () => {
-    if (document.body.classList.contains('portfolio-page')) {
-      const portfolioFilters = document.querySelectorAll('.isotope-filters li[data-filter="games"]');
-      if (portfolioFilters.length) {
-        portfolioFilters[0].click();
+// On portfolio page load, auto-switch to the "Games" filter
+window.addEventListener('load', () => {
+  if (document.body.classList.contains('portfolio-page')) {
+    // wait 0.4 seconds
+    setTimeout(() => {
+      const portfolioFilter = document.querySelector(".isotope-filters li[data-filter='.filter-game']");
+      if (portfolioFilter) {
+        portfolioFilter.click();
       }
-    }
-  });
+    }, 400);
+  }
+});
 
 })();
