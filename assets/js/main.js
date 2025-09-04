@@ -191,7 +191,6 @@
   // on portfolio page load auto switch to games
   window.addEventListener('load', () => {
     if (document.body.classList.contains('portfolio-page')) {
-      console.log('portfolio page loaded');
       const portfolioFilters = document.querySelectorAll('.isotope-filters li[data-filter="games"]');
       if (portfolioFilters.length) {
         portfolioFilters[0].click();
