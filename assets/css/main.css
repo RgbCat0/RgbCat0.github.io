@@ -971,8 +971,10 @@ section,
 
 .portfolio-details .portfolio-code-snippet .right-col p {
   margin-bottom: 10px;
+  color: var(--default-color);
 }
 
 .portfolio-details .portfolio-code-snippet .right-col ul {
   padding-left: 20px;
+  color: var(--default-color);
 }
