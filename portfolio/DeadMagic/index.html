@@ -148,30 +148,67 @@
               </p>
             </div>
           </div>
-          <div class="col-lg-5 portfolio-key-features" data-aos="fade-up" data-aos-delay="400">
-            <div class="portfolio-description">
-              <h3>Key Features</h3>
-              <ul>
-                <li>4-Player online-multiplayer utilising Unity Netcode</li>
-                <li>Magic based combat with multiple spell types</li>
-                <li>Multiple enemy types</li>
-                <li>Endless wave-based gameplay with different difficulty levels</li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-5 portfolio-key-features" data-aos="fade-up" data-aos-delay="400">
-            <div class="portfolio-description">
-              <h3>Technical Highlights</h3>
-              <ul>
-                <li>Build with Unity 6.0 + C#</li>
-                <li>Utilizes Unity Netcode for GameObjects for multiplayer functionality</li>
-                <li>Utilizes Unity Relay and Unity Lobby Services for networking and quick matchmaking</li>
-              </ul>
-            </div>
-          </div>
-          <div class="portfolio-details container">
-            <div class="portfolio-code-snippet">
 
+          <!-- Key Features and Technicals in 2x2 grid -->
+          <div class="row g-4 mb-4">
+            <div class="col-md-6 d-flex">
+              <div class="portfolio-key-features h-100 w-100 d-flex flex-column" data-aos="fade-up" data-aos-delay="100">
+                <div class="portfolio-description flex-grow-1">
+                  <h3>Key Features</h3>
+                  <ul>
+                    <li>4-Player online-multiplayer utilising Unity Netcode</li>
+                    <li>Magic based combat with multiple spell types</li>
+                    <li>Multiple enemy types</li>
+                    <li>Endless wave-based gameplay with different difficulty levels</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 d-flex">
+              <div class="portfolio-key-features h-100 w-100 d-flex flex-column" data-aos="fade-up" data-aos-delay="150">
+                <div class="portfolio-description flex-grow-1">
+                  <h3>Technical Highlights</h3>
+                  <ul>
+                    <li>Build with Unity 6.0 + C#</li>
+                    <li>Utilizes Unity Netcode for GameObjects for multiplayer functionality</li>
+                    <li>Utilizes Unity Relay and Unity Lobby Services for networking and quick matchmaking</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 d-flex">
+              <div class="portfolio-key-features h-100 w-100 d-flex flex-column" data-aos="fade-up" data-aos-delay="200">
+                <div class="portfolio-description flex-grow-1">
+                  <h3>My Role</h3>
+                  <p>As a key member of the development team, I focused on implementing the multiplayer aspects of the game.</p>
+                  <ul>
+                    <li>Implemented multiplayer functionality using Unity Netcode for GameObjects</li>
+                    <li>Developed core gameplay mechanics including spell casting and enemy AI</li>
+                    <li>Collaborated on level design and overall game balancing</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 d-flex">
+              <div class="portfolio-key-features h-100 w-100 d-flex flex-column" data-aos="fade-up" data-aos-delay="250">
+                <div class="portfolio-description flex-grow-1">
+                  <h3>Insights</h3>
+                  <p>
+                    Working on DeadMagic provided valuable insights into multiplayer game development, particularly in
+                    the areas of networking and gameplay synchronization. Key takeaways include:
+                  </p>
+                  <ul>
+                    <li>Effective use of Unity's Netcode for handling multiplayer interactions</li>
+                    <li>Collaboration and communication are crucial in a team setting</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Code Snippet Section below the 2x2 grid -->
+          <div class="portfolio-details container" data-aos="fade-up" data-aos-delay="300">
+            <div class="portfolio-code-snippet">
               <!-- LEFT COLUMN -->
               <div class="left-col">
                 <!-- Prism Code Snippet -->
@@ -185,32 +222,35 @@ public void CastSpellServerRpc(Vector3 target)
     NetworkObject networkObject = spell.GetComponent<NetworkObject>();
     networkObject.Spawn();
 }
-      </code></pre>
+                </code></pre>
               </div>
               <!-- RIGHT COLUMN -->
               <div class="right-col">
-                <h3>Multiplayer Spellcasting</h3>
+                <h3>Multiplayer Lobby Handling</h3>
                 <p>
-                  This code snippet handles **networked spell casting** using Unity's **Netcode for GameObjects**.
-                  When a player casts a spell, the server:
+                  This code snippet handles <strong>networked lobby management</strong> using Unity's <strong>Netcode for
+                    GameObjects</strong>.
+                  When a player joins the lobby, the server:
                 </p>
                 <ul>
-                  <li>Spawns a new spell object</li>
-                  <li>Applies velocity towards the target</li>
+                  <li>Creates a new lobby instance</li>
+                  <li>Initializes player slots and settings</li>
                   <li>Synchronizes it across all clients</li>
                 </ul>
 
                 <a href="https://github.com/yourusername/DeadMagic" class="btn btn-dark mt-2" target="_blank">
-                  View Full Code on GitHub
+                  View full script on GitHub
+                </a>
+                <a href="https://github.com/rgbcat0/ProjectPlaceHolder" class="btn btn-dark mt-2" target="_blank">
+                  View full project on GitHub
                 </a>
                 <!-- Video -->
                 <div class="video mt-3">
-                  <video autoplay loop muted playsinline class="img-fluid rounded">
+                  <video controls class="img-fluid rounded">
                     <source src="../../assets/VidImg/DeadMagic/Gameplay.mp4" type="video/mp4">
                   </video>
                 </div>
               </div>
-
             </div>
           </div>
 
