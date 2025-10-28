@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT WEIDEMA TRAIL-RUN</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            min-height: 100vh;
+            background-color: #111;
+            padding: 20px;
+        }
+        
+        .flyer {
+            width: 800px;
+            background-color: #000;
+            color: white;
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+        
+        .header {
+            padding: 30px;
+            text-align: center;
+        }
+        
+
+        .header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #A7E200;
+        }
+        .logo {
+            padding: 20px;
+            text-align: center;
+        }
+        .logo img { /* set img in middle of div */
+            width: 200px;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .subtitle {
+            background-color: #C00000;
+            color: white;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-top: 15px;
+            border-radius: 4px;
+        }
+        .info-section {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 15px;
+          padding: 25px;
+          border-bottom: 2px solid #C00000;
+
+          justify-items: center; /* center items horizontally in each cell */
+          align-items: center;   /* center items vertically in each cell */
+          text-align: center;    /* center text inside each item */
+        }
+        
+        .info-item {
+            margin-bottom: 15px;
+        }
+        
+        .info-item strong {
+            display: block;
+            color: #A7E200;
+            font-size: 18px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+        
+        .content {
+            padding: 25px;
+        }
+
+        
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #A7E200;
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #C00000;
+        }
+        
+        .exercises {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .exercise-item {
+            display: flex;
+
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #333;
+        }
+        
+        .exercise-name {
+            font-weight: bold;
+        }
+        
+        .exercise-distance {
+            color: #A7E200;
+            font-weight: bold;
+        }
+        
+        .participants {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 25px 0;
+            text-transform: uppercase;
+            color: #A7E200;
+
+        }
+        
+        .price-section {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #C00000;
+        }
+        
+        .price {
+            font-size: 32px;
+            font-weight: bold;
+            color: #A7E200;
+        }
+        
+        .price-label {
+            font-size: 18px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        
+
+        @media (max-width: 850px) {
+            .flyer {
+                width: 95%;
+            }
+            
+            .header h1 {
+                font-size: 32px;
+            }
+            
+            .subtitle {
+                font-size: 20px;
+            }
+            
+            .info-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .exercises {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="flyer">
+        <div class="logo">
+            <img src="https://media.discordapp.net/attachments/769867209907765280/1432830203276558426/WeidemaPT_150ppi_vs3white-01.png?ex=69027a9d&is=6901291d&hm=c9188e475b0571c86090704ae40fda34a56db884128181584bbebbde3502c8b9&=&format=png&quality=lossless" alt="Logo Not Found" />
+        </div>
+        <div class="header">
+            <h1>🏋️‍♀️ PT WEIDEMA TRAIL-RUN</h1>
+            <div class="subtitle">TRAIL-RUN MET KRACHTOEFENINGEN</div>
+        </div>
+        
+        <div class="info-section">
+            <div class="info-item">
+                <strong>WAAR</strong>
+                Park Maarssenbroek
+            </div>
+            <div class="info-item">
+                <strong>WIE</strong>
+                Alle niveaus
+            </div>
+            <div class="info-item">
+
+                <strong>WAT</strong>
+                Trail-run met krachtoefeningen
+                
+              </div>
+              <div class="info-item">
+                <strong>WANNEER</strong>
+                15 maart 2026
+              </div>
+        </div>
+        
+        <div class="content">
+            <div class="section-title">PARCOURS + OEFENINGEN</div>
+            
+            <div class="exercises">
+                <div class="exercise-item">
+                    <span class="exercise-name">Goblet Squats</span>
+                    <span class="exercise-distance">250 m run</span>
+                </div>
+                <div class="exercise-item">
+
+                    <span class="exercise-name">Plank Shoulder Taps</span>
+                    <span class="exercise-distance">250 m run</span>
+                </div>
+                <div class="exercise-item">
+                    <span class="exercise-name">Walking Lunges 6/8/12 kg</span>
+                    <span class="exercise-distance">250 m run</span>
+                </div>
+                <div class="exercise-item">
+                    <span class="exercise-name">Tricep Extensions</span>
+                    <span class="exercise-distance">250 m run</span>
+                </div>
+                <div class="exercise-item">
+                    <span class="exercise-name">Burpees</span>
+                    <!-- <span class="exercise-label">Kracht</span> -->
+                    <span class="exercise-distance">250 m run</span>
+                </div>
+                <div class="exercise-item">
+                    <span class="exercise-name">Thrusters 10 kg Slam Ball</span>
+                    <span class="exercise-distance">250 m run</span>
+                </div>
+                <div class="exercise-item">
+                    <span class="exercise-name">Slam Ball Shoulder to Shoulder</span>
+                    <span class="exercise-distance">250 m run</span>
+                </div>
+                <div class="exercise-item">
+                    <span class="exercise-name">Plank Shoulder Taps</span>
+                    <span class="exercise-distance">250 m run</span>
+                </div>
+
+                <div class="exercise-item">
+                    <span class="exercise-name">Slam Ball Sit-ups 10 kg</span>
+                    <span class="exercise-distance">250 m run</span>
+                </div>
+                <div class="exercise-item">
+                    <span class="exercise-name">Slam Ball Tricep Ext 6 kg</span>
+                    <span class="exercise-distance">250 m run</span>
+                </div>
+            </div>
+            
+            <div class="participants">DEELNEMERS: Max 15 per wedstrijd</div>
+            
+            <div class="price-section">
+                <div class="price-label">KOSTEN:</div>
+
+                <div class="price">€15,-</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
