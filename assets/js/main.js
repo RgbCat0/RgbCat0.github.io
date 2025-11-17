@@ -96,7 +96,7 @@
    */
   function aosInit() {
     AOS.init({
-      duration: 600,
+      duration: 10,
       easing: 'ease-in-out',
       once: true,
       mirror: false
@@ -159,46 +159,19 @@
   /**
    * Init isotope layout and filters
    */
-  document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
-    let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
-    let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
-    let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
-
-    let initIsotope;
-    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
-      initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
-        itemSelector: '.isotope-item',
-        layoutMode: layout,
-        filter: filter,
-        sortBy: sort
-      });
-    });
-
-    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
-      filters.addEventListener('click', function() {
-        isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
-        this.classList.add('filter-active');
-        initIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        if (typeof aosInit === 'function') {
-          aosInit();
-        }
-      }, false);
-    });
-
-  });
-// On portfolio page load, auto-switch to the "Games" filter
-window.addEventListener('load', () => {
-  if (document.body.classList.contains('portfolio-page')) {
-    // wait 0.4 seconds
-    setTimeout(() => {
-      const portfolioFilter = document.querySelector(".isotope-filters li[data-filter='.filter-game']");
-      if (portfolioFilter) {
-        portfolioFilter.click();
-      }
-    }, 400);
-  }
-});
+  
 
 })();
+window.addEventListener("load", syncSnippetHeight);
+window.addEventListener("resize", syncSnippetHeight);
+
+function syncSnippetHeight() {
+  console.log("Syncing snippet height...");
+  const leftCode = document.querySelector(".portfolio-code-snippet .left-row pre");
+  const rightContent = document.querySelector(".portfolio-code-snippet .right-row");
+  console.log("Left Code Block:", leftCode);
+  console.log("Right Content Block:", rightContent);
+  if (leftCode && rightContent) {
+    leftCode.style.maxHeight = rightContent.offsetHeight + "px";
+  }
+}
